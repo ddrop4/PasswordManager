@@ -3,20 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49241D08EDD2AD71E46E4613 /* Pods_PasswordManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20005B07764BA2AF4477AE57 /* Pods_PasswordManager.framework */; };
 		9D48B277239FCFE8009F1090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D48B276239FCFE8009F1090 /* AppDelegate.swift */; };
 		9D48B279239FCFE8009F1090 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D48B278239FCFE8009F1090 /* SceneDelegate.swift */; };
 		9D48B280239FCFE9009F1090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D48B27F239FCFE9009F1090 /* Assets.xcassets */; };
 		9D48B283239FCFE9009F1090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D48B281239FCFE9009F1090 /* LaunchScreen.storyboard */; };
 		9D48B28B239FD01E009F1090 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D48B28A239FD01E009F1090 /* NavigationViewController.swift */; };
-		9D48B28D239FD2B6009F1090 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D48B28C239FD2B6009F1090 /* ViewController.swift */; };
+		9D48B28D239FD2B6009F1090 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D48B28C239FD2B6009F1090 /* TableViewController.swift */; };
 		9D48B28F239FD92B009F1090 /* AddNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D48B28E239FD92B009F1090 /* AddNewViewController.swift */; };
+		9D48B29223A10AD6009F1090 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D48B29123A10AD6009F1090 /* TabBarViewController.swift */; };
+		9D48B29523A16D32009F1090 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D48B29423A16D32009F1090 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05A924E863B9ED0547895A1C /* Pods-PasswordManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordManager.debug.xcconfig"; path = "Target Support Files/Pods-PasswordManager/Pods-PasswordManager.debug.xcconfig"; sourceTree = "<group>"; };
+		20005B07764BA2AF4477AE57 /* Pods_PasswordManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PasswordManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D48B273239FCFE8009F1090 /* PasswordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D48B276239FCFE8009F1090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D48B278239FCFE8009F1090 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,8 +29,11 @@
 		9D48B282239FCFE9009F1090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D48B284239FCFE9009F1090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D48B28A239FD01E009F1090 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
-		9D48B28C239FD2B6009F1090 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9D48B28C239FD2B6009F1090 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9D48B28E239FD92B009F1090 /* AddNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewViewController.swift; sourceTree = "<group>"; };
+		9D48B29123A10AD6009F1090 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		9D48B29423A16D32009F1090 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B13D05C7E173FED0F2B34BE0 /* Pods-PasswordManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordManager.release.xcconfig"; path = "Target Support Files/Pods-PasswordManager/Pods-PasswordManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49241D08EDD2AD71E46E4613 /* Pods_PasswordManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77B530B9FAC8051F5CA7965C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05A924E863B9ED0547895A1C /* Pods-PasswordManager.debug.xcconfig */,
+				B13D05C7E173FED0F2B34BE0 /* Pods-PasswordManager.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		802B9A9E6EDBF24D6708F299 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20005B07764BA2AF4477AE57 /* Pods_PasswordManager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9D48B26A239FCFE8009F1090 = {
 			isa = PBXGroup;
 			children = (
 				9D48B275239FCFE8009F1090 /* PasswordManager */,
 				9D48B274239FCFE8009F1090 /* Products */,
+				77B530B9FAC8051F5CA7965C /* Pods */,
+				802B9A9E6EDBF24D6708F299 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,12 +86,13 @@
 		9D48B275239FCFE8009F1090 /* PasswordManager */ = {
 			isa = PBXGroup;
 			children = (
+				9D48B29323A16D20009F1090 /* Cell */,
+				9D48B290239FD974009F1090 /* View */,
 				9D48B276239FCFE8009F1090 /* AppDelegate.swift */,
 				9D48B278239FCFE8009F1090 /* SceneDelegate.swift */,
 				9D48B27F239FCFE9009F1090 /* Assets.xcassets */,
 				9D48B281239FCFE9009F1090 /* LaunchScreen.storyboard */,
 				9D48B284239FCFE9009F1090 /* Info.plist */,
-				9D48B290239FD974009F1090 /* View */,
 			);
 			path = PasswordManager;
 			sourceTree = "<group>";
@@ -72,10 +101,19 @@
 			isa = PBXGroup;
 			children = (
 				9D48B28A239FD01E009F1090 /* NavigationViewController.swift */,
-				9D48B28C239FD2B6009F1090 /* ViewController.swift */,
+				9D48B28C239FD2B6009F1090 /* TableViewController.swift */,
 				9D48B28E239FD92B009F1090 /* AddNewViewController.swift */,
+				9D48B29123A10AD6009F1090 /* TabBarViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9D48B29323A16D20009F1090 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9D48B29423A16D32009F1090 /* TableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D48B287239FCFE9009F1090 /* Build configuration list for PBXNativeTarget "PasswordManager" */;
 			buildPhases = (
+				75B6B90F0317BDFFD5096B51 /* [CP] Check Pods Manifest.lock */,
 				9D48B26F239FCFE8009F1090 /* Sources */,
 				9D48B270239FCFE8009F1090 /* Frameworks */,
 				9D48B271239FCFE8009F1090 /* Resources */,
+				EAD84B7CA7BCEF7AB7CE6242 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,6 +183,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		75B6B90F0317BDFFD5096B51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PasswordManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAD84B7CA7BCEF7AB7CE6242 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PasswordManager/Pods-PasswordManager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PasswordManager/Pods-PasswordManager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PasswordManager/Pods-PasswordManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9D48B26F239FCFE8009F1090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -151,7 +233,9 @@
 				9D48B28F239FD92B009F1090 /* AddNewViewController.swift in Sources */,
 				9D48B28B239FD01E009F1090 /* NavigationViewController.swift in Sources */,
 				9D48B277239FCFE8009F1090 /* AppDelegate.swift in Sources */,
-				9D48B28D239FD2B6009F1090 /* ViewController.swift in Sources */,
+				9D48B28D239FD2B6009F1090 /* TableViewController.swift in Sources */,
+				9D48B29223A10AD6009F1090 /* TabBarViewController.swift in Sources */,
+				9D48B29523A16D32009F1090 /* TableViewCell.swift in Sources */,
 				9D48B279239FCFE8009F1090 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +370,7 @@
 		};
 		9D48B288239FCFE9009F1090 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05A924E863B9ED0547895A1C /* Pods-PasswordManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +389,7 @@
 		};
 		9D48B289239FCFE9009F1090 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B13D05C7E173FED0F2B34BE0 /* Pods-PasswordManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

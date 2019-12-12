@@ -1,21 +1,22 @@
 //
-//  NavigationViewController.swift
+//  TabBarViewController.swift
 //  PasswordManager
 //
-//  Created by an.chernyshev on 10/12/2019.
+//  Created by an.chernyshev on 11/12/2019.
 //  Copyright © 2019 an.chernyshev. All rights reserved.
 //
 
 import UIKit
 
-class NavigationViewController: UINavigationController {
+class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = .systemRed
     }
+    
 
     /*
     // MARK: - Navigation
