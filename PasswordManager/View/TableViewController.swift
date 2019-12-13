@@ -49,7 +49,7 @@ class TableViewController: UITableViewController {
     
     private func tableViewSettings() {
         self.tableView = UITableView.init(frame: .zero, style: .plain)
-        self.tableView.backgroundColor = .systemBlue
+        self.tableView.backgroundColor = .white
     }
     
     private func addLeftButton() {
