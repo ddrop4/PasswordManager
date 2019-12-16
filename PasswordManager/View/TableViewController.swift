@@ -24,6 +24,8 @@ class TableViewController: UITableViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         registerCell()
+        setupSaveButton()
+        setupSearchBar()
     }
     
     // MARK: - Properties
@@ -75,5 +77,32 @@ class TableViewController: UITableViewController {
     private func registerCell() {
         self.tableView.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
     }
+    
+    private func setupSaveButton() {
+           let window = UIWindow()
+           let width = window.frame.size.width / 2 - 50
+           let saveButton = UIButton(type: .custom)
+           let customView = UIView(frame: CGRect(x: Int(width), y: 20, width: 100, height: 45))
+           
+           saveButton.frame = CGRect(x: 0, y: 0, width: 100, height: 35)
+           saveButton.backgroundColor = .white
+           saveButton.setTitle("Save", for: .normal)
+           saveButton.setTitleColor(.systemBlue, for: .normal)
+           saveButton.addTarget(self, action: #selector(actionSave), for: .touchUpInside)
+           
+           customView.addSubview(saveButton)
+           self.tableView.tableFooterView = customView
+       }
+       
+       private func setupSearchBar() {
+           let searchController = UISearchController(searchResultsController: nil)
+           self.navigationItem.searchController = searchController
+           searchController.searchBar.sizeToFit()
+       }
+       
+       @objc private func actionSave() {
+           print(#function)
+       }
+
     
 }
