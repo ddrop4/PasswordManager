@@ -68,7 +68,7 @@ class TableViewController: UITableViewController {
     }
     
     @objc private func pushToNewController() {
-        let pushVC = AddNewViewController()
+        let pushVC = NewPasswordViewController()
         self.navigationController?.pushViewController(pushVC, animated: true)
     }
     
