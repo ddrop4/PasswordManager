@@ -49,11 +49,6 @@ class NewPasswordViewController: UITableViewController {
         return cell
     }
     
-    override func setEditing(_ editing: Bool, animated: Bool) {
-        <#code#>
-    }
-    
-    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
