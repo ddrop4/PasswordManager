@@ -11,3 +11,8 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     
 }
+
+struct Kek {
+    var name: String
+    var label: String
+}

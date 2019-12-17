@@ -15,17 +15,26 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        self.view.backgroundColor = .systemOrange
         addLeftButton()
         addRightButton()
         tableViewSettings()
+        setupSaveButton()
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
         registerCell()
         setupSaveButton()
         setupSearchBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
     }
     
     // MARK: - Properties
@@ -35,12 +44,12 @@ class TableViewController: UITableViewController {
     // MARK: - UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myArray.count
+        return 17
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
-        cell.textLabel?.text = myArray[indexPath.row]
+//        cell.textLabel?.text = myArray[indexPath.row]
         cell.textLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         cell.imageView?.image = UIImage(named: "icon")
         cell.accessoryType = .disclosureIndicator
@@ -52,6 +61,9 @@ class TableViewController: UITableViewController {
     private func tableViewSettings() {
         self.tableView = UITableView.init(frame: .zero, style: .plain)
         self.tableView.backgroundColor = .white
+        self.tableView.separatorStyle = .none
+        self.tableView.showsVerticalScrollIndicator = false
+        self.tableView.showsHorizontalScrollIndicator = false
     }
     
     private func addLeftButton() {
@@ -62,7 +74,7 @@ class TableViewController: UITableViewController {
         let leftBarButton = UIBarButtonItem(customView: label)
         self.navigationItem.setLeftBarButton(leftBarButton, animated: true)
     }
-    
+        
     private func addRightButton() {
         let rightBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(pushToNewController))
         rightBarButton.tintColor = .systemBlue

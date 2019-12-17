@@ -5,7 +5,7 @@ DEPENDENCIES:
   - FlexLayout
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - FlexLayout
 
 SPEC CHECKSUMS:
@@ -13,4 +13,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 15dfc4fb45e757d6b8e3f0bbd9de818b446d95c6
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.7.5
