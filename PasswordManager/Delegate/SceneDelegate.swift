@@ -19,9 +19,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         let tabBarVC = TabBarViewController()
         let firstVC = TableViewController()
+        let secondVC = SettingsViewController()
         let navController = NavigationViewController(rootViewController: firstVC)
+        let secondNavController = NavigationViewController(rootViewController: secondVC)
+        
         firstVC.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 0)
-        let controllers = [navController]
+        secondVC.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
+        
+        let controllers = [navController, secondNavController]
         tabBarVC.viewControllers = controllers
         UINavigationBar.appearance().tintColor = .systemBlue
         guard let windowScene = (scene as? UIWindowScene) else { return }

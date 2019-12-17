@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddNewViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class SettingsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 50
@@ -16,7 +16,7 @@ class AddNewViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! UICollectionViewCell
-        cell.backgroundColor = .systemPurple
+        cell.backgroundColor = .systemBlue
         return cell
     }
     
@@ -37,16 +37,20 @@ class AddNewViewController: UIViewController, UICollectionViewDelegate, UICollec
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         let myCollectionView: UICollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         let cellSize = CGSize(width: 390, height: 80)
+        
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
+        
         layout.scrollDirection = .vertical
         layout.itemSize = cellSize
         layout.minimumLineSpacing = 3.0
         layout.minimumInteritemSpacing = 3.0
         layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        
         myCollectionView.backgroundColor = .systemPink
-        view.addSubview(myCollectionView)
         myCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "collectionViewCell")
+        
+        view.addSubview(myCollectionView)
     }
     
 }
