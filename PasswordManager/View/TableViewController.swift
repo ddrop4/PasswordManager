@@ -19,12 +19,12 @@ class TableViewController: UITableViewController {
         addRightButton()
         tableViewSettings()
         setupSaveButton()
+        registerCell()
+        setupSearchBar()
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        registerCell()
-        setupSaveButton()
-        setupSearchBar()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,12 +44,12 @@ class TableViewController: UITableViewController {
     // MARK: - UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 17
+        return myArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
-//        cell.textLabel?.text = myArray[indexPath.row]
+        cell.textLabel?.text = myArray[indexPath.row]
         cell.textLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         cell.imageView?.image = UIImage(named: "icon")
         cell.accessoryType = .disclosureIndicator
@@ -106,15 +106,14 @@ class TableViewController: UITableViewController {
            self.tableView.tableFooterView = customView
        }
        
-       private func setupSearchBar() {
-           let searchController = UISearchController(searchResultsController: nil)
-           self.navigationItem.searchController = searchController
-           searchController.searchBar.sizeToFit()
-       }
+    private func setupSearchBar() {
+        let searchController = UISearchController(searchResultsController: nil)
+        self.navigationItem.searchController = searchController
+        searchController.searchBar.sizeToFit()
+    }
        
-       @objc private func actionSave() {
-           print(#function)
-       }
+    @objc private func actionSave() {
+        print(#function)
+    }
 
-    
 }
